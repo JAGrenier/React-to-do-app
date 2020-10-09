@@ -12,11 +12,17 @@ class App extends Component {
     ]
   }
 
+  deleteTodo = (id) => {
+    const todos = this.state.todos.filter(todo => todo.id !== id)
+    this.setState({todos})
+    // fetch('url', {method: 'DELETE'})
+  }
+
   render(){
     return (
         <main>
           <h1>To Do App!</h1>
-          <TodoList todos={this.state.todos}/>
+          <TodoList todos={this.state.todos} deleteTodo={this.deleteTodo}/>
         </main>
       );
   }
