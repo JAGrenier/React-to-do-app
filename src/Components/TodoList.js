@@ -3,10 +3,10 @@ import TodoItem from './TodoItem'
 
 export default function TodoList({todos}) {
     
-    const showTodos = todos.map(todo => <TodoItem key={todo.id} todo={todo} /> ) 
+    const showTodos = todos.map(todo => <TodoItem key={todo.id} {...todo} /> ) 
 
     return (
-        <ul className="to-do-list">
+        <ul className="todo-list">
             {showTodos}
         </ul>
     )

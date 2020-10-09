@@ -1,10 +1,10 @@
 import React from 'react'
 
-export default function TodoItem(props) {
+export default ({id, title, content, urgent})=>{
     return (
-        <li>
-            <h2>Title</h2>
-            <p>Content of to do</p>
+        <li className={urgent ? "todo-item urgent": "todo-item"}>
+            <h2>{title}</h2>
+            <p>{content}</p>
         </li>
     )
 }
